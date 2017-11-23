@@ -44,9 +44,36 @@
     border: 2px solid #FFF;
   }
   #gambar{
-    margin-right:50px;
-    margin-left:20px;
+    margin-left:7%;
   }
+  #keterangan{
+    font-size:20px;
+  }
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: rgba(100, 100, 100, 0.5);
+  color: white;
+  font-size: 30px;
+  padding: 16px 32px;
+}
   
 </style>
 </head>
@@ -112,9 +139,65 @@
 
   </div>
 
-    <div id="tempat wisata" style="padding:30px">
-    <img src="image/tanah-lot-temple2.jpg" style="height: 300px; width:250px;" id="gambar">
-    <img src="image/uluwatu-temple-.jpg" style="height: 300px; width:250px;" id="gambar">
-    <img src="image/Basukih-Temple-View-.jpg" style="height: 300px; width:250px;" id="gambar">
+<div class="row" style="padding:30px">
+    <div class="col-md-4 container" >
+      <div class="thumbnail">   
+          <img src="image/tanah-lot-temple2.jpg" alt="Lights" style="height: 300px; width:100%;display: block;">
+          <div class="middle">
+            <div class="text">Tanah Lot Temple</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 container" >
+      <div class="thumbnail "> 
+          <img src="image/uluwatu-temple-.jpg" alt="Nature" style="height: 300px; width:100%;display: block;">
+          <div class="middle">
+            <div class="text">Uluwatu Temple</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 container">
+      <div class="thumbnail ">       
+          <img src="image/Basukih-Temple-View-.jpg" alt="Fjords" style="height: 300px; width:100%;display: block;">
+          <div class="middle">
+             <div class="text">Besakih Temple</div>
+           </div>
+        </a>
+      </div>
+    </div>
+</div>
+
+<div class="row" style="padding:30px">
+    <div class="col-md-4 container" >
+      <div class="thumbnail">   
+          <img src="image/tegallang.jpg" alt="Lights" style="height: 300px; width:100%;display: block;">
+          <div class="middle">
+            <div class="text">Tegallalang Rice Terraces</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 container" >
+      <div class="thumbnail "> 
+          <img src="image/ubudMarket.jpg" alt="Nature" style="height: 300px; width:100%;display: block;">
+          <div class="middle">
+            <div class="text">Ubud Market</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 container">
+      <div class="thumbnail ">       
+          <img src="image/ubud.jpg" alt="Fjords" style="height: 300px; width:100%;display: block;">
+          <div class="middle">
+             <div class="text">Ubud Monkey Forest</div>
+           </div>
+        </a>
+      </div>
+    </div>
+</div>
+    
 </body>
 </html>
