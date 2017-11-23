@@ -43,54 +43,58 @@
     background: #5E4485;
     border: 2px solid #FFF;
   }
+  #gambar{
+    margin-right:50px;
+    margin-left:20px;
+  }
   
 </style>
 </head>
 <body>
-  <nav class="navbar navbar-inverse ">
-    <div class="container-fluid fixed-top">
+  <nav class="navbar navbar-inverse navbar-fixed-top " style="background-color: #5E4485;">
+    <div class="container-fluid ">
       <div class="navbar-header">
        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="img/w3newbie.png"></a>
+      <a class="navbar-brand" href="#"><img src="image/logo1.png" style="width:200px;height: 60px;"></a>
     </div>
 
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse" id="myNavbar" style="">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Packets</a></li>
+        <li ><a href="#" ><big>HOME</big></a></li>
+        <li><a href="#" ><big>Packets</big></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Create an Account</a></li>
-        <li><a class="glyphicon glyphicon-user" href="#">Sign In</a></li> 
+        <li><a href="#" ><big>Create an Account</big></a></li>
+        <li><a class="glyphicon glyphicon-user " href="#" >SignIn</a></li> 
       </ul>
     </div>
   </div>
 </nav>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" >
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner" role="listbox" style="position:relative;margin-top:60px">
     <div class="item active">
-    <img src="image/mount-batur-seconds-after-sunrise.jpg" style="height: 300px; width:100%;">
+    <img src="image/mount-batur-seconds-after-sunrise.jpg" style="height: 350px; width:100%;">
       <div class="carousel-caption">
-        <h1>  </h1>
+    
         <br>
         
       </div>
     </div> <!-- End Active -->
     <div class="item">
-    <img src="image/tanah-lot-temple2.jpg" style="height: 300px; width:100%;">
+    <img src="image/tanah-lot-temple2.jpg" style="height: 350px; width:100%;">
     </div>
     <div class="item">
-        <img src="image/uluwatu-temple-.jpg" style="height: 300px; width:100%;">
+        <img src="image/uluwatu-temple-.jpg" style="height: 350px; width:100%;">
     </div>
     <!-- Start Slider Controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -102,6 +106,15 @@
       <span class="sr-only">Next</span>
     </a>
     </div> <!-- End slider -->
+    
+
+
+
   </div>
+
+    <div id="tempat wisata" style="padding:30px">
+    <img src="image/tanah-lot-temple2.jpg" style="height: 300px; width:250px;" id="gambar">
+    <img src="image/uluwatu-temple-.jpg" style="height: 300px; width:250px;" id="gambar">
+    <img src="image/Basukih-Temple-View-.jpg" style="height: 300px; width:250px;" id="gambar">
 </body>
 </html>
