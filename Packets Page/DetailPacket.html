@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Discover Bali</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .navbar{
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #5E4485;
+    color: #FFF;
+    padding: 1% 0;
+    font-size: 1.2em;
+    border: 0;
+  }
+  .navbar-brand{
+    float:left;
+    min-height: 55px;
+    padding: 0 15px 5px;
+  }
+
+  .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus , .navbar-inverse .navbar-nav .active a:hover{
+    color: #FFF;
+    background-color: #5E4485;
+  }
+  .navbar-inverse .navbar-nav li a{
+    color: #D5D5D5;
+  }
+  .carousel-caption{
+    top:50% ;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+  }
+  .btn{
+    font-size: 18px;
+    color: #FFF;
+    padding: 12px 22px;
+    background: #5E4485;
+    border: 2px solid #FFF;
+  }
+  .pagination {
+    margin-bottom: 15px;
+  }
+  
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid fixed-top">
+      <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="../image/logo1.png" style="width:200px;height: 60px;"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="../home.html">Home</a></li>
+        <li class="active"><a href="#">Packets</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Create an Account</a></li>
+        <li><a class="glyphicon glyphicon-user" href="#" onclick="whenClicked()">Sign In</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Page Content -->
+<div class="container">
+
+  <!-- Page Heading -->
+  <h1 class="my-4">Page Heading
+    <small>Secondary Text</small>
+  </h1>
+
+  <!-- Project One -->
+  <div class="row">
+    <div class="col-md-7">
+      <a href="#">
+        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/600x300" alt="">
+      </a>
+    </div>
+    <div class="col-md-5">
+      <h2>7 Days - Packet A</h2>
+      <h3>Price: IDR 5.000.000,-</h3>
+      <a class="btn btn-primary" href="#">See Details</a>
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <hr>
+
+  <!-- Project Two -->
+  <div class="row">
+    <div class="col-md-7">
+      <a href="#">
+        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/600x300" alt="">
+      </a>
+    </div>
+    <div class="col-md-5">
+      <h2>7 Days - Packet A</h2>
+      <h3>Price: IDR 5.000.000,-</h3>
+      <a class="btn btn-primary" href="#">See Details</a>
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <hr>
+
+  <!-- Project Three -->
+  <div class="row">
+    <div class="col-md-7">
+      <a href="#">
+        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/600x300" alt="">
+      </a>
+    </div>
+    <div class="col-md-5">
+      <h2>7 Days - Packet A</h2>
+      <h3>Price: IDR 5.000.000,-</h3>
+      <a class="btn btn-primary" href="#">See Details</a>
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <hr>
+
+  <!-- Project Four -->
+  <div class="row">
+    <div class="col-md-7">
+      <a href="#">
+        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/600x300" alt="">
+      </a>
+    </div>
+    <div class="col-md-5">
+      <h2>7 Days - Packet A</h2>
+      <h3>Price: IDR 5.000.000,-</h3>
+      <a class="btn btn-primary" href="#">See Details</a>
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <hr>
+
+  <!-- Pagination -->
+ 
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- MODAL -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <i class="fa fa-remove w3-xxlarge " data-dismiss="modal" style="padding-left: 90%"> </i>
+          <div class="modal-body" style="padding:40px 50px;">
+            Enter username and Password<br>
+            <form role="form">
+              <div class="form-group">
+                <input type="text" class="form-control" id="usrname" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="psw" placeholder="Password">
+              </div>
+              <button type="submit" class="btn w3-theme ">Login</button>
+              <button type="submit" class="btn w3-theme" data-dismiss="modal"> Cancel</button>
+            </form>
+            <br>
+            <a href="#">Forget password?</a>
+            <p>If you don't have any account, please <a href="#">SIGN UP</a>.</p>
+          </div>
+          <div class="modal-footer">
+
+
+          </div>
+        </div>
+
+      </div>
+    </div> 
+    <script>
+      function whenClicked(){
+        // $(document).ready(function(){
+        //  $("#myBtn").click(function(){
+
+        //  });
+        // });
+        $("#myModal").modal();
+      }
+      
+    </script>
+</body>
+</html>
