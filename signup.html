@@ -27,10 +27,14 @@
 
   .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus , .navbar-inverse .navbar-nav .active a:hover{
     color: #FFF;
-    background-color: #5E4485;
+    background-color: rgba(255, 255, 255, 0.5);
   }
   .navbar-inverse .navbar-nav li a{
-    color: #959AB2;
+    color: #C6C3BF;
+  }
+  .navbar-inverse .navbar-nav li a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
   }
   .carousel-caption{
     top:50% ;
@@ -52,7 +56,7 @@
 </head>
 <body>
   <nav class="navbar navbar-inverse">
-    <div class="container-fluid fixed-top">
+    <div class="container-fluid">
       <div class="navbar-header">
        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -65,7 +69,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="home.html">Home</a></li>
-        <li><a href="Packets Page/packet.html">Packets</a></li>
+        <li><a href="Packets Page/packet.html">Packages</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="#">Create an Account</a></li>
@@ -141,36 +145,33 @@
 </footer>
 
 <!-- MODAL -->
-<div class="modal fade" id="myModal" role="dialog">
-  <div class="modal-dialog">
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <i class="fa fa-remove w3-xxlarge " data-dismiss="modal" style="padding-left: 90%"> </i>
-      <div class="modal-body" style="padding:40px 50px;">
-        Enter username and Password<br>
-        <form role="form">
-          <div class="form-group">
-            <input type="text" class="form-control" id="usrname" placeholder="Username">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <i class="fa fa-remove w3-xxlarge" data-dismiss="modal" style="padding-left: 96.5%"> </i>
+          <div class="modal-body" style="padding:40px 50px; text-align: center;">
+            Enter username and Password<br>
+            <form role="form">
+              <div class="form-group">
+                <input type="text" class="form-control" id="usrname" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="psw" placeholder="Password">
+              </div>
+              <button type="submit" class="btn w3-theme ">Login</button>
+              <button type="submit" class="btn w3-theme" data-dismiss="modal"> Cancel</button>
+            </form>
+            <br>
+            <a href="#">Forget password?</a>
+            <p>If you don't have any account, please <a href="signup.html">Sign Up</a>.</p>
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control" id="psw" placeholder="Password">
+          <div class="modal-footer">
           </div>
-          <button type="submit" class="btn w3-theme ">Login</button>
-          <button type="submit" class="btn w3-theme" data-dismiss="modal"> Cancel</button>
-        </form>
-        <br>
-        <a href="#">Forget password?</a>
-        <p>If you don't have any account, please <a href="#">SIGN UP</a>.</p>
+        </div>
       </div>
-      <div class="modal-footer">
-
-
-      </div>
-    </div>
-
-  </div>
-</div> 
+    </div> 
 <script>
   function whenClicked(){
         // $(document).ready(function(){
