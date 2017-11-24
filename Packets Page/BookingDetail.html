@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Discover Bali</title>
+  <title>Booking Detail</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -76,8 +76,8 @@
 </nav>
 <div>
 <ul class="breadcrumb">
-  <li><a href="../home.html">Package</a></li>
-  <li><a href="../BookingDetail.html">Ubud Tour</a></li>
+  <li><a href="packet.html">Package</a></li>
+  <li><a href="ubudTour.html">Ubud Tour</a></li>
   <li>Booking Detail</li>
 </ul>
 <!-- Page Content -->
@@ -114,11 +114,11 @@
 <br><br>
     <div class="form-group" style="background-color: #5E4485;width:500px;font-size:30px;color:white;padding:10px;">
       <text>Amount</text><text style="float:right; " id="amount">Rp 5.000.000,-</text><br>
-      <text>Discount</text><text style="float:right;" id="discount">Rp 0,-</text><br>
+      <text>Discount</text><text style="float:right;" id="discount">Rp 0,-</text><br><hr>
       <text>Total</text ><text style="float:right;" id="total">Rp 500.000,-</text><br>
     </div>
 
-<button type="button" class="btn btn-primary btn-lg" style="margin-top:40px;" ><a href="ubudTour.html">Next</a></button>
+<button type="button" class="btn btn-primary btn-lg" style="margin-top:40px;" onclick="whenClicked()" ><a href="#">Next</a></button>
   </div>
     <div >
   <hr>
@@ -130,38 +130,35 @@
 </footer>
 
 <!-- MODAL -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-          <i class="fa fa-remove w3-xxlarge " data-dismiss="modal" style="padding-left: 90%"> </i>
-          <div class="modal-body" style="padding:40px 50px;">
-            Enter username and Password<br>
-            <form role="form">
-              <div class="form-group">
-                <input type="text" class="form-control" id="usrname" placeholder="Username">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="psw" placeholder="Password">
-              </div>
-              <button type="submit" class="btn w3-theme ">Login</button>
-              <button type="submit" class="btn w3-theme" data-dismiss="modal"> Cancel</button>
-            </form>
-            <br>
-            <a href="#">Forget password?</a>
-            <p>If you don't have any account, please <a href="#">SIGN UP</a>.</p>
+    <!-- Modal content-->
+    <div class="modal-content">
+      <i class="fa fa-remove w3-xxlarge" data-dismiss="modal" style="padding-left: 96.5%"> </i>
+      <div class="modal-body" style="padding:40px 50px; text-align: center;">
+        Enter username and Password
+        <form role="form">
+          <div class="form-group">
+            <input type="text" class="form-control" id="usrname" placeholder="Username">
           </div>
-          <div class="modal-footer">
-
-
+          <div class="form-group">
+            <input type="text" class="form-control" id="psw" placeholder="Password">
           </div>
-        </div>
-
+          <button type="submit" class="btn w3-theme">Login</button>
+          <button type="submit" class="btn w3-theme" data-dismiss="modal"> Cancel</button>
+        </form>
+        <br>
+        <a href="#">Forget password?</a>
+        <p>If you don't have any account, please <a href="signup.html">Sign Up</a>.</p>
       </div>
-    </div> 
-    <script>
-      function whenClicked(){
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div> 
+<script>
+  function whenClicked(){
         // $(document).ready(function(){
         //  $("#myBtn").click(function(){
 
@@ -169,6 +166,12 @@
         // });
         $("#myModal").modal();
       }
+      
+    </script>
+
+
+    <script>
+      
 
       $("#jumlahmember").change(function() {
         var test=$('#jumlahmember').val();
