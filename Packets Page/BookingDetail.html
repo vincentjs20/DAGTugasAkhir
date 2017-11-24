@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <style>
   .navbar{
     margin-bottom: 0;
@@ -76,7 +77,8 @@
 <div>
 <ul class="breadcrumb">
   <li><a href="../home.html">Package</a></li>
-  <li>Ubud Tour</li>
+  <li><a href="../BookingDetail.html">Ubud Tour</a></li>
+  <li>Booking Detail</li>
 </ul>
 <!-- Page Content -->
 <div class="container">
@@ -100,51 +102,39 @@
     <div class="form-group">
       <label >Member Type</label>
       <div class=" selectContainer">
-            <select class="form-control" name="size">
-                <option value="" class="active">Group</option>
-                <option value="s">Single</option>
-                <option value="m">Couple</option>
-                <option value="l">Family</option>
+            <select class="form-control" name="membertipe " id="tipe">
+               <option value="single" class="active">Single</option>
+                <option value="group" >Group</option>         
+                <option value="couple">Couple</option>
+                <option value="family">Family</option>
             </select>
-            <a class="glyphicon glyphicon-user" href="#" style="margin-left:30px;"></a><input type="number" style="width:50px;margin-left:10px;">
+            <a class="glyphicon glyphicon-user" href="#" style="margin-left:30px;"></a><input type="number" style="width:50px;margin-left:10px;" id="jumlahmember" min="4" value="1" disabled>
         </div>
     </div>
 <br><br>
     <div class="form-group" style="background-color: #5E4485;width:500px;font-size:30px;color:white;padding:10px;">
-      <text>Amount</text><text style="float:right; ">Rp 25.000.000,-</text><br>
-      <text>Discount</text><text style="float:right;">Rp 1.000.000,-</text><br>
-      <text>Total</text ><text style="float:right;">Rp 24.000.000,-</text><br>
+      <text>Amount</text><text style="float:right; " id="amount">Rp 5.000.000,-</text><br>
+      <text>Discount</text><text style="float:right;" id="discount">Rp 0,-</text><br>
+      <text>Total</text ><text style="float:right;" id="total">Rp 500.000,-</text><br>
     </div>
 
 <button type="button" class="btn btn-primary btn-lg" style="margin-top:40px;" ><a href="ubudTour.html">Next</a></button>
   </div>
     <div >
-    <br>
- 
-  <!-- /.row -->
-<br>
-  <br>
   <hr>
-
-
-  <!-- Pagination -->
- 
-<!-- /.container -->
-
-<!-- Footer -->
-<!-- <footer class="py-5 bg-dark">
+<footer class="py-5 bg-dark">
   <div class="container">
     <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-  </div> -->
+  </div>
   <!-- /.container -->
-<!-- </footer> -->
+</footer>
 
 <!-- MODAL -->
-  <!--   <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog"> -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
 
         <!-- Modal content-->
-       <!--  <div class="modal-content">
+        <div class="modal-content">
           <i class="fa fa-remove w3-xxlarge " data-dismiss="modal" style="padding-left: 90%"> </i>
           <div class="modal-body" style="padding:40px 50px;">
             Enter username and Password<br>
@@ -169,7 +159,7 @@
         </div>
 
       </div>
-    </div>  -->
+    </div> 
     <script>
       function whenClicked(){
         // $(document).ready(function(){
@@ -179,7 +169,51 @@
         // });
         $("#myModal").modal();
       }
-      
+
+      $("#jumlahmember").change(function() {
+        var test=$('#jumlahmember').val();
+        $('#amount').text("Rp "+test*500+".000,-");
+        $('#discount').text("Rp 200.000,-");
+        $('#total').text("Rp "+((test*500)-200)+".000,-");
+
+        });
+      $("#tipe").change(function() {
+    var jumlah = "0";
+    if($('#tipe').val() == "single") 
+    {
+        jumlah = "1";
+        document.getElementById('jumlahmember').disabled = true;
+        $('#amount').text("Rp 500.000,-");
+        $('#discount').text("Rp 0,-");
+        $('#total').text("Rp 500.000,-");
+    }
+    else if ($('#tipe').val() == "couple") 
+    {
+        jumlah = "2";
+        document.getElementById('jumlahmember').disabled = true;
+        $('#amount').text("Rp 1.000.000,-");
+        $('#discount').text("Rp 50.000,-");
+        $('#total').text("Rp 950.000,-");
+    }
+    else if ($('#tipe').val() == "group") 
+    {
+        jumlah = "4";
+        document.getElementById("jumlahmember").disabled = false;
+        $temp=$("#jumlahmember").val();
+        $('#amount').text("Rp "+"2.000.000"+",-");
+        $('#discount').text("Rp 200.000,-");
+        $('#total').text("Rp 1.800.000,-");
+    }
+    else if ($('#tipe').val() == "family") 
+    {
+        jumlah = "3";
+        document.getElementById('jumlahmember').disabled = true;
+        $('#amount').text("Rp 1.500.000,-");
+        $('#discount').text("Rp 100.000,-");
+        $('#total').text("Rp 1.400.000,-");
+    }
+    $('#jumlahmember').val(jumlah);
+});
     </script>
 </body>
 </html>
