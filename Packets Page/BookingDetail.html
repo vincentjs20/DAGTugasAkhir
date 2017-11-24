@@ -74,7 +74,7 @@
              <option value="couple">Couple</option>
              <option value="family">Family</option>
            </select>
-           <a class="glyphicon glyphicon-user" href="#" style="margin-left:30px;"></a><input type="number" style="width:50px;margin-left:10px;" id="jumlahmember" min="4" value="1" disabled>
+           <a class="glyphicon glyphicon-user " href="#" style="margin-left:30px;"></a><input type="number" style="width:50px;margin-left:10px;text-align:center" id="jumlahmember" min="4" value="1" disabled> <label > Person</label>
          </div>
        </div>
        <br><br>
@@ -178,9 +178,27 @@
 
       $("#jumlahmember").change(function() {
         var test=$('#jumlahmember').val();
-        $('#amount').text("Rp "+test*500+".000,-");
+        if(test==4){
+        $('#amount').text("Rp "+"2.000"+".000,-");
+        $('#discount').text("Rp 200.000,-");
+        $('#total').text("Rp 1.800.000,-");
+        }
+        else if(test==5){
+      $('#amount').text("Rp "+"2.500"+".000,-");
+        $('#discount').text("Rp 200.000,-");
+        $('#total').text("Rp 2.300.000,-");
+        }
+        else if(test==6){
+      $('#amount').text("Rp "+"3.000"+".000,-");
+        $('#discount').text("Rp 200.000,-");
+        $('#total').text("Rp 2.800.000,-");
+        }
+        else{
+           $('#amount').text("Rp "+test*500+".000,-");
         $('#discount').text("Rp 200.000,-");
         $('#total').text("Rp "+((test*500)-200)+".000,-");
+        }
+       
 
       });
       $("#tipe").change(function() {
