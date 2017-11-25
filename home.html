@@ -152,33 +152,30 @@
 
 
 
-<!-- MODAL -->
-<div class="modal fade" id="myModal" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <i class="fa fa-remove w3-xxlarge" data-dismiss="modal" style="padding-left: 96.5%"> </i>
-      <div class="modal-body" style="padding:40px 50px; text-align: center;">
-        Enter username and Password
-        <form role="form">
-          <div class="form-group">
-            <input type="text" class="form-control" id="usrname" placeholder="Username">
+      <!-- MODAL -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <i class="fa fa-remove w3-xxlarge" data-dismiss="modal" style="padding-left: 96.5%"> </i>
+            <div class="modal-body" style="padding:40px 50px; text-align: center;">
+              Enter username and Password
+                <div>
+                  <input type="text" class="form-control" placeholder="Username">
+                </div><br>
+                <div>
+                  <input type="password" class="form-control" placeholder="Password">
+                </div><br>
+                <button class="btn w3-theme"><a href="homesignedin.html" style="color:white">Login</a></button>
+              <br>
+              <a href="#">Forget password?</a>
+              <p>If you don't have any account, please <a href="signup.html" style="color:white">Sign Up</a>.</p>
+            </div>
+            <div class="modal-footer">
+            </div>
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control" id="psw" placeholder="Password">
-          </div>
-          <button type="submit" class="btn w3-theme " style="color:white">Login</button>
-        </form>
-        <br>
-        <a href="#">Forget password?</a>
-        <p>If you don't have any account, please <a href="signup.html" style="color:white">Sign Up</a>.</p>
-      </div>
-      <div class="modal-footer">
-      </div>
-    </div>
-  </div>
-</div> 
+        </div>
+      </div> 
 <script>
   function whenClicked(){
         // $(document).ready(function(){
