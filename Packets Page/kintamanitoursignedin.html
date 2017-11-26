@@ -12,34 +12,39 @@
 
 </head>
 <body>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid fixed-top">
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid ">
       <div class="navbar-header">
-       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><img src="../image/logo1.png" style="width:200px;height: 60px;"></a>
-    </div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="../image/logo1.png" style="width:200px;height: 60px;"></a>
+      </div>
 
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="../home.html">Home</a></li>
-        <li class="active"><a href="packet.html">Tour Packages</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="../signup.html">Create an Account</a></li>
-        <li><a class="glyphicon glyphicon-user" href="#" onclick="whenClicked()">Sign In</a></li> 
-      </ul>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="../homesignedin.html">Home</a></li>
+          <li class="active"><a href="packetsignedin.html">Tour Packages</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Dani <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="Packets Page/mypacket.html">My Packet</a></li>
+              <li><a href="home.html">Sign Out</a></li>    
+            </ul>
+          </li> 
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 <div>
   <ul class="breadcrumb">
-    <li><a href="packet.html">Package</a></li>
+    <li><a href="packetsignedin.html">Package</a></li>
     <li>Kintamani Tour</li>
   </ul>
+</div>
   <!-- Page Content -->
   <div class="container">
 
@@ -54,7 +59,7 @@
       </div>
       <div class="col-md-5">
         <h1 style="margin-top:100px;">Price: IDR 600.000,-</h1>
-        <button type="button" class="btn btn-primary btn-lg" style="margin-left:100px"><a href="BookingDetail2.html" style="color: white">Book Now</a></button>
+        <button type="button" class="btn btn-primary btn-lg" style="margin-left:100px"><a href="BookingDetailsignedin2.html" style="color: white">Book Now</a></button>
       </div>
     </div>
     <div >
@@ -148,43 +153,5 @@
 </div>
 </footer>
 
-<!-- MODAL -->
-<div class="modal fade" id="myModal" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <i class="fa fa-remove w3-xxlarge" data-dismiss="modal" style="padding-left: 96.5%"> </i>
-      <div class="modal-body" style="padding:40px 50px; text-align: center;">
-        Enter username and Password
-        <form role="form">
-          <div class="form-group">
-            <input type="text" class="form-control" id="usrname" placeholder="Username">
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" id="psw" placeholder="Password">
-          </div>
-          <button type="submit" class="btn w3-theme"><a href="kintamanitoursignedin.html" style="color: white">Login</a></button>
-        </form>
-        <br>
-        <a href="#">Forget password?</a>
-        <p>If you don't have any account, please <a href="signup.html">Sign Up</a>.</p>
-      </div>
-      <div class="modal-footer">
-      </div>
-    </div>
-  </div>
-</div> 
-<script>
-  function whenClicked(){
-        // $(document).ready(function(){
-        //  $("#myBtn").click(function(){
-
-        //  });
-        // });
-        $("#myModal").modal();
-      }
-      
-    </script>
   </body>
   </html>
