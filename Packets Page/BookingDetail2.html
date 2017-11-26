@@ -43,18 +43,18 @@
 
   <ul class="breadcrumb">
     <li><a href="packet.html">Package</a></li>
-    <li><a href="ubudTour.html">Ubud Tour</a></li>
+    <li><a href="kintamaniTour.html">Kintamani Tour</a></li>
     <li>Booking Detail</li>
   </ul>
   <!-- Page Content -->
   <div class="container">
-    <h1 class="my-4">1 Day - Ubud Tour</h1>
+    <h1 class="my-4">1 Day - Kintamani Tour</h1>
     <!-- Project One -->
 
     <div class="row">
       <div class="col-md-7">
         <a href="#">
-          <img class="img-fluid rounded mb-3 mb-md-0" src="../image/ubudtour.jpg" alt="">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="../image/kintamanitour.jpg" alt="">
         </a>
       </div>
       <div class="col-md-5">
@@ -89,6 +89,9 @@
     </div>
   </div >
 </form>
+</div>
+</div>
+</div>
 </div>
 
 <!-- Footer -->
@@ -151,7 +154,6 @@
 
 
 
-
 <!-- MODAL -->
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog">
@@ -166,7 +168,7 @@
         <div>
           <input type="password" class="form-control" placeholder="Password">
         </div>
-        <button class="btn w3-theme"><a href="payment.html" style="color:white">Login</a></button>
+        <button class="btn w3-theme"><a href="paymentkintamani.html" style="color:white">Login</a></button>
         <br>
         <a href="#">Forget password?</a>
         <p>If you don't have any account, please <a href="signup.html" style="color:white">Sign Up</a>.</p>
@@ -198,24 +200,24 @@
         {
           jumlah = "1";
           document.getElementById('jumlahmember').disabled = true;
-          $('#amount').text("Rp 500.000,-");
+          $('#amount').text("Rp 600.000,-");
           $('#discount').text("Rp 0,-");
-          $('#total').text("Rp 500.000,-");
+          $('#total').text("Rp 600.000,-");
         }
         else if ($('#tipe').val() == "couple") 
         {
           jumlah = "2";
           document.getElementById('jumlahmember').disabled = true;
-          $('#amount').text("Rp 1.000.000,-");
+          $('#amount').text("Rp 1.200.000,-");
           $('#discount').text("Rp 50.000,-");
-          $('#total').text("Rp 950.000,-");
+          $('#total').text("Rp 1.150.000,-");
         }
         else if ($('#tipe').val() == "group") 
         {
           jumlah = "4";
           document.getElementById("jumlahmember").disabled = false;
           $temp=$("#jumlahmember").val();
-          $('#amount').text("Rp "+"2.000.000"+",-");
+          $('#amount').text("Rp "+"2.400.000"+",-");
           $('#discount').text("Rp 200.000,-");
           $('#total').text("Rp 1.800.000,-");
         }
@@ -223,9 +225,9 @@
         {
           jumlah = "3";
           document.getElementById('jumlahmember').disabled = true;
-          $('#amount').text("Rp 1.500.000,-");
+          $('#amount').text("Rp 1.800.000,-");
           $('#discount').text("Rp 100.000,-");
-          $('#total').text("Rp 1.400.000,-");
+          $('#total').text("Rp 1.700.000,-");
         }
         $('#jumlahmember').val(jumlah);
       });
@@ -233,24 +235,24 @@
       $("#jumlahmember").change(function() {
         var test=$('#jumlahmember').val();
         if(test==4){
-          $('#amount').text("Rp "+"2.000"+".000,-");
+          $('#amount').text("Rp "+"2.400"+".000,-");
           $('#discount').text("Rp 200.000,-");
-          $('#total').text("Rp 1.800.000,-");
+          $('#total').text("Rp 2.200.000,-");
         }
         else if(test==5){
-          $('#amount').text("Rp "+"2.500"+".000,-");
-          $('#discount').text("Rp 200.000,-");
-          $('#total').text("Rp 2.300.000,-");
-        }
-        else if(test==6){
           $('#amount').text("Rp "+"3.000"+".000,-");
           $('#discount').text("Rp 200.000,-");
           $('#total').text("Rp 2.800.000,-");
         }
+        else if(test==6){
+          $('#amount').text("Rp "+"3.600"+".000,-");
+          $('#discount').text("Rp 200.000,-");
+          $('#total').text("Rp 3.400.000,-");
+        }
         else{
-         $('#amount').text("Rp "+test*500+".000,-");
+         $('#amount').text("Rp "+test*600+".000,-");
          $('#discount').text("Rp 200.000,-");
-         $('#total').text("Rp "+((test*500)-200)+".000,-");
+         $('#total').text("Rp "+((test*600)-200)+".000,-");
        }
        
 
@@ -261,34 +263,34 @@
         {
           jumlah = "1";
           document.getElementById('jumlahmember').disabled = true;
-          $('#amount').text("Rp 500.000,-");
+          $('#amount').text("Rp 600.000,-");
           $('#discount').text("Rp 0,-");
-          $('#total').text("Rp 500.000,-");
+          $('#total').text("Rp 600.000,-");
         }
         else if ($('#tipe').val() == "couple") 
         {
           jumlah = "2";
           document.getElementById('jumlahmember').disabled = true;
-          $('#amount').text("Rp 1.000.000,-");
+          $('#amount').text("Rp 1.200.000,-");
           $('#discount').text("Rp 50.000,-");
-          $('#total').text("Rp 950.000,-");
+          $('#total').text("Rp 1.150.000,-");
         }
         else if ($('#tipe').val() == "group") 
         {
           jumlah = "4";
           document.getElementById("jumlahmember").disabled = false;
           $temp=$("#jumlahmember").val();
-          $('#amount').text("Rp "+"2.000.000"+",-");
+          $('#amount').text("Rp "+"2.400.000"+",-");
           $('#discount').text("Rp 200.000,-");
-          $('#total').text("Rp 1.800.000,-");
+          $('#total').text("Rp 2.200.000,-");
         }
         else if ($('#tipe').val() == "family") 
         {
           jumlah = "3";
           document.getElementById('jumlahmember').disabled = true;
-          $('#amount').text("Rp 1.500.000,-");
+          $('#amount').text("Rp 1.800.000,-");
           $('#discount').text("Rp 100.000,-");
-          $('#total').text("Rp 1.400.000,-");
+          $('#total').text("Rp 1.700.000,-");
         }
         $('#jumlahmember').val(jumlah);
       });
