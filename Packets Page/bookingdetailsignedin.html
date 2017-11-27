@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Booking Detail</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+  <link rel="stylesheet" type="text/css" href="../style/style.css">
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid ">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="../image/logo1.png" style="width:200px;height: 60px;"></a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="../homesignedin.html">Home</a></li>
+          <li class="active"><a href="packetsignedin.html">Tour Packages</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Dani <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="Packets Page/mypacket.html">My Packet</a></li>
+              <li><a href="home.html">Sign Out</a></li>    
+            </ul>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div>
+
+    <ul class="breadcrumb">
+      <li><a href="packetsigned.html">Package</a></li>
+      <li><a href="ubudToursignedin.html">Ubud Tour</a></li>
+      <li>Booking Detail</li>
+    </ul>
+  </div>
+    <!-- Page Content -->
+    <div class="container">
+      <h1 class="my-4">1 Day - Ubud Tour</h1>
+      <!-- Project One -->
+
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="../image/ubudtour.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-md-5">
+         <form class="form-inline" action="/action_page.php">
+          <div class="form-group">
+            <label for="date">Choose date</label>
+            <input type="date" class="form-control" id="date" style="margin-left:10px;">
+
+          </div>
+          <br><br>
+          <div class="form-group">
+            <label >Member Type</label>
+            <div class=" selectContainer">
+              <select class="form-control" name="membertipe " id="tipe">
+               <option value="single" class="active">Single</option>
+               <option value="group" >Group</option>         
+               <option value="couple">Couple</option>
+               <option value="family">Family</option>
+             </select>
+             <a class="glyphicon glyphicon-user " href="#" style="margin-left:30px;"></a><input type="number" style="width:50px;margin-left:10px;text-align:center" id="jumlahmember" min="4" value="1" disabled> <label > Person</label>
+           </div>
+         </div>
+         <br><br>
+         <div class="form-group" style="background-color: #5E4485;width:500px;font-size:30px;color:white;padding:10px;">
+          <text>Amount</text><text style="float:right; " id="amount"></text><br>
+          <text>Discount</text><text style="float:right;" id="discount"></text><br><hr>
+          <text>Total</text ><text style="float:right;" id="total"></text><br>
+        </div>
+
+
+        <a class="btn btn-primary" href="payment.html" style="margin-top: 25px; margin-bottom: 50px">Next</a>
+      </div>
+    </div >
+  </form>
+</div>
+
+<!-- Footer -->
+<footer>
+
+  <div class="footer-top"> 
+   <div class="container">
+     <div class="col-lg-3 col-xs-9 text-center">
+       <a href="#"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
+     </div>
+     <div class="col-lg-3 col-xs-9 text-center">
+       <a href="#"><i class="fa fa-twitter fa-2x"></i>Twitter</a>
+     </div>
+
+     <div class="col-lg-3 col-xs-9 text-center">
+       <a href="#"><i class="fa fa-instagram fa-2x"></i>Instagram</a>
+     </div>
+     <div class="col-lg-3 col-xs-9 text-center">
+       <a href="#"><i class="fa fa-google-plus fa-2x"></i>Google</a>
+     </div>
+   </div> 
+ </div>  
+
+ <div class="container" style="border-top:1px solid grey;">
+  <div class="row text-center">   
+    <div class="col-lg-6 col-lg-offset-3">
+      <ul class="menu">
+
+       <li>
+        <a href="#">Home</a>
+      </li>
+
+      <li>
+       <a href="#">About</a>
+     </li>
+
+
+     <li>
+       <a href="#">Gallery</a>
+     </li>
+
+     <li>
+      <a href="#">Contact</a>
+    </li>
+
+  </ul>
+</div>
+</div>
+</div>
+<div class="copyright" style="background-color:#5E4485;color:white">
+ <div class="container">
+
+   <div class="row text-center">
+    <p>Copyright © 2017 All rights reserved</p>
+  </div>
+
+</div>
+</div>
+</footer>
+
+
+
+<script>
+  $( document ).ready(function() {
+    var jumlah = "0";
+    if($('#tipe').val() == "single") 
+    {
+      jumlah = "1";
+      document.getElementById('jumlahmember').disabled = true;
+      $('#amount').text("Rp 500.000,-");
+      $('#discount').text("Rp 0,-");
+      $('#total').text("Rp 500.000,-");
+    }
+    else if ($('#tipe').val() == "couple") 
+    {
+      jumlah = "2";
+      document.getElementById('jumlahmember').disabled = true;
+      $('#amount').text("Rp 1.000.000,-");
+      $('#discount').text("Rp 50.000,-");
+      $('#total').text("Rp 950.000,-");
+    }
+    else if ($('#tipe').val() == "group") 
+    {
+      jumlah = "4";
+      document.getElementById("jumlahmember").disabled = false;
+      $temp=$("#jumlahmember").val();
+      $('#amount').text("Rp "+"2.000.000"+",-");
+      $('#discount').text("Rp 200.000,-");
+      $('#total').text("Rp 1.800.000,-");
+    }
+    else if ($('#tipe').val() == "family") 
+    {
+      jumlah = "3";
+      document.getElementById('jumlahmember').disabled = true;
+      $('#amount').text("Rp 1.500.000,-");
+      $('#discount').text("Rp 100.000,-");
+      $('#total').text("Rp 1.400.000,-");
+    }
+    $('#jumlahmember').val(jumlah);
+  });
+
+  $("#jumlahmember").change(function() {
+    var test=$('#jumlahmember').val();
+    if(test==4){
+      $('#amount').text("Rp "+"2.000"+".000,-");
+      $('#discount').text("Rp 200.000,-");
+      $('#total').text("Rp 1.800.000,-");
+    }
+    else if(test==5){
+      $('#amount').text("Rp "+"2.500"+".000,-");
+      $('#discount').text("Rp 200.000,-");
+      $('#total').text("Rp 2.300.000,-");
+    }
+    else if(test==6){
+      $('#amount').text("Rp "+"3.000"+".000,-");
+      $('#discount').text("Rp 200.000,-");
+      $('#total').text("Rp 2.800.000,-");
+    }
+    else{
+     $('#amount').text("Rp "+test*500+".000,-");
+     $('#discount').text("Rp 200.000,-");
+     $('#total').text("Rp "+((test*500)-200)+".000,-");
+   }
+
+
+ });
+  $("#tipe").change(function() {
+    var jumlah = "0";
+    if($('#tipe').val() == "single") 
+    {
+      jumlah = "1";
+      document.getElementById('jumlahmember').disabled = true;
+      $('#amount').text("Rp 500.000,-");
+      $('#discount').text("Rp 0,-");
+      $('#total').text("Rp 500.000,-");
+    }
+    else if ($('#tipe').val() == "couple") 
+    {
+      jumlah = "2";
+      document.getElementById('jumlahmember').disabled = true;
+      $('#amount').text("Rp 1.000.000,-");
+      $('#discount').text("Rp 50.000,-");
+      $('#total').text("Rp 950.000,-");
+    }
+    else if ($('#tipe').val() == "group") 
+    {
+      jumlah = "4";
+      document.getElementById("jumlahmember").disabled = false;
+      $temp=$("#jumlahmember").val();
+      $('#amount').text("Rp "+"2.000.000"+",-");
+      $('#discount').text("Rp 200.000,-");
+      $('#total').text("Rp 1.800.000,-");
+    }
+    else if ($('#tipe').val() == "family") 
+    {
+      jumlah = "3";
+      document.getElementById('jumlahmember').disabled = true;
+      $('#amount').text("Rp 1.500.000,-");
+      $('#discount').text("Rp 100.000,-");
+      $('#total').text("Rp 1.400.000,-");
+    }
+    $('#jumlahmember').val(jumlah);
+  });
+</script>
+</body>
+</html>
