@@ -64,7 +64,7 @@
          <form class="form-inline" action="/action_page.php">
           <div class="form-group">
             <label for="date">Choose date</label>
-            <input type="date" class="form-control" id="date" style="margin-left:10px;">
+            <input type="date" class="form-control" id="date" style="margin-left:10px;" required>
 
           </div>
           <br><br>
@@ -73,9 +73,10 @@
             <div class=" selectContainer">
               <select class="form-control" name="membertipe " id="tipe">
                <option value="single" class="active">Single</option>
-               <option value="group" >Group</option>         
+                     
                <option value="couple">Couple</option>
                <option value="family">Family</option>
+                <option value="group" >Group</option>  
              </select>
              <a class="glyphicon glyphicon-user " href="#" style="margin-left:30px;"></a><input type="number" style="width:50px;margin-left:10px;text-align:center" id="jumlahmember" min="4" value="1" disabled> <label > Person</label>
            </div>
